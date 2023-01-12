@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<head>
+    <title>Uber Eats</title>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+</head>
+
+<style>
+    body {
+        margin: 0;
+        font-family: sans-serif;
+    }
+    
+
+    .first-div{
+        width: 100%;
+        height: 100vh;
+     }
+    .img-block{
+        background-image: url(images/homeimage.png);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+    background-color: #F2CA2F;
+    }
+    .nav-block {
+        background: transparent;
+        z-index: -1;
+        padding: 19px 40px;
+    }
+
+    .nav-block ul{
+        margin-left: -56px;
+    }
+
+    .caption-box{
+        width: 100%;
+        padding: 138px 0px 0px 45px;    }
+    .nav-box{
+        position: relative;
+        padding: 0 14px;
+    }
+    .caption {
+        color: #000000;
+        margin-bottom: 40px;
+        line-height: 64px;
+        font-size: 52px;
+        font-weight: 700;
+    }
+    .address-field{
+        min-width: 500px;
+        position: relative;
+    } 
+    .address-field input{
+        background-color: #FFFFFF;
+        border: 0;
+        padding: 8px 41px;
+        font-size: 16px;
+        font-family: UberMoveText, sans-serif;
+    }
+    .seperation-box{
+        height: 50px;
+    }
+    .features-box {
+        width: 33.333%;
+        background-color:#FFFFFF;
+        /* height: 285px; */
+        margin: 15px;
+    }
+    .features-box a {
+        margin-top: 8px;
+        line-height: 20px;
+        font-size: 16px;
+        cursor: pointer;
+        font-weight: 500;
+        color: #000000;
+
+    }
+    .features-box h1 {
+    margin-bottom: 8px;
+    }
+    .box-fit-padding {
+        padding: 32px;
+
+    }
+    .box {
+        display: flex;
+
+    }
+
+    .feature-img{
+        /* height: 205px; */
+        width: 100%;
+        object-fit: contain;
+    }
+    .map-title {
+        font-family:sans-serif;
+        font-size: 36px;
+        display: inline;
+    }
+    .map-block {
+        padding-top: 36px;
+        margin: 31px 0;
+
+    }
+    #googleMap{
+        width: 100%;
+        height: 400px;
+    }
+    .top-footer {
+        width: 100%;
+        display: grid;
+        grid: auto auto auto auto;
+        grid-gap: 24px;
+        grid-template-columns: 25% 25% 25% 25%;
+
+  
+    }
+    .top-footer div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: left;
+        font-size: 30px;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: sans-serif;
+
+    }
+    .top-footer a {
+        text-decoration: none;
+        color: #000;
+    }
+    .second-footer {
+        margin: 70px 0 80px 0  ;
+    }
+    .second-footer  h1 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    .ftr {
+        border-top: 1px solid #E2E2E2;
+        padding-top: 80px;
+
+
+    }
+    .seperation-1 {
+        width: 100%;
+        display: grid;
+        grid: auto auto auto auto;
+        grid-gap: 24px;
+        grid-template-columns: 50% 50% ;
+    }
+    .box1,.box2 {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: left;
+        font-size: 30px;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: sans-serif;
+    }
+
+    .box2,.box1 {
+        width: 100%;
+        display: grid;
+        grid: auto auto auto auto;
+        grid-gap: 24px;
+        grid-template-columns: 50% 50% ;
+    }
+
+    .box2 div, .box2 div {
+
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: left;
+        font-size: 30px;
+        font-size: 16px;
+        line-height: 24px;
+        font-family: sans-serif;
+    }
+    .box2 a {
+        text-decoration: none;
+        color: #000;
+    }
+    .inline-title{
+        padding-bottom: 30px;
+    }
+    .inline-title a,.inline-title h1{
+        display: inline;
+    }
+    .inline-title a{
+        float: right;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 500;
+        color: #000000;
+
+    }
+    
+    .nav-item a {
+        white-space: nowrap;
+        line-height: 20px;
+        padding: 12px 16px;
+
+    }
+    .nav-items li{
+        display: inline;
+    }
+    .nav-item{
+        float: right;
+    width: 106px;
+    margin-right: 16px;
+    background: #FFFFFF;
+    border-radius: 500px;
+    min-height: 48px;
+    position: relative;
+
+    }
+    .nav-item svg {
+        width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 26%;
+    padding-left: 10px;
+    }
+    .nav-item span {
+     position: absolute;
+    top: 27%;
+    padding-left: 38px;
+    font-weight: 700;
+    }
+    .signupbtn {
+        background-color: #000000 !important;
+        color: #FFFFFF;
+        position: relative;
+    }
+    .signupbtn a {
+        position: absolute;
+        left: 9%;
+
+    }
+    .menu-btn {
+        background: transparent;
+        border: 0px;
+        padding-right: 36px;
+
+
+    }
+    .menu-btn svg {
+        width: 20px;
+    }
+
+    .address-block {
+        display: flex;
+    }
+    .address-field {
+        background-color: #FFFFFF;
+        margin-right:10px ;
+        height: 40px;
+        padding: 8px 16px;
+
+    }
+    .address-field svg {
+        position: absolute;
+        top: 15px;
+    }
+    .select-field {
+        min-width: 147px;
+    background-color: #FFFFFF;
+    margin-right: 10px;
+    height: 40px;
+    padding: 8px 16px;
+    position: relative;
+
+    }
+
+    .select-field svg {
+        position: absolute;
+        top: 15px;
+    }
+
+    .select-field input{
+        background-color: #FFFFFF;
+    border: 0;
+    padding: 8px 41px;
+    font-size: 16px;
+    font-family: UberMoveText, sans-serif;
+    width: 92px;
+    }
+    .order-btn {
+        width: 116px;
+    background: #000;
+    border-radius: 10px;
+    color: #ffff;
+     font-weight: 700;
+    padding-top: 20px;
+    text-align: center;
+    }
+    .para a {
+        color: #000;
+      
+    }
+    .para {
+        font-size: 14px;
+        font-weight: 700;
+        margin-top: 20px;
+
+    }
+
+    .map-block a{
+        float: right;
+        color: #000;
+    }
+
+</style>
+
+<body>
+    <div class="container first-div">
+        
+        <div  class="img-block">
+            <header>
+                <div class="nav-box">
+                    <div class="nav-block">
+                        <ul class="nav-items">
+                            <li>
+                                <button class="menu-btn">
+                                    <svg aria-hidden="true" focusable="false" viewBox="0 0 20 20" class="dh di c6 cf"><path d="M19.167 3.333H.833v2.5h18.334v-2.5zm0 5.834H.833v2.5h18.334v-2.5zM.833 15h18.334v2.5H.833V15z"></path></svg>
+                                </button>
+                            </li>
+                            <li>
+                                <img alt="Uber Eats Home" role="img" src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/97c43f8974e6c876.svg" width="146" height="24" class="be dr dv">               
+
+                            </li>
+                            <li class="nav-item signupbtn">
+                                <a>Sign Up</a>
+                            </li>
+                            <li class="nav-item">
+                               <svg aria-hidden="true" focusable="false" viewBox="0 0 26 26" class="dh di c6 cf"><path fill-rule="evenodd" clip-rule="evenodd" d="M18.958 7.042a5.958 5.958 0 11-11.916 0 5.958 5.958 0 0111.916 0zM3.25 21.667c0-3.575 2.925-6.5 6.5-6.5h6.5c3.575 0 6.5 2.925 6.5 6.5v3.25H3.25v-3.25z"></path></svg><span>Log in</span>
+                            </li>
+                            
+                        </ul>
+                     </div>
+                </div>
+            </header>
+            <div class="caption-box">
+                <h1 class="caption">Order food to your door </h1>
+                
+                    <div class="address-block">
+                        <div class="address-field">
+                            <svg width="24px" height="24px" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M17.5834 5.16602C14.5001 2.08268 9.50008 2.08268 6.41675 5.16602C3.33341 8.24935 3.33341 13.3327 6.41675 16.416L12.0001 21.9993L17.5834 16.3327C20.6667 13.3327 20.6667 8.24935 17.5834 5.16602ZM12.0001 12.416C11.0834 12.416 10.3334 11.666 10.3334 10.7493C10.3334 9.83268 11.0834 9.08268 12.0001 9.08268C12.9167 9.08268 13.6667 9.83268 13.6667 10.7493C13.6667 11.666 12.9167 12.416 12.0001 12.416Z" fill="currentColor"></path></svg>
+                            <input type="text" placeholder="Enter delivery address">
+                        </div>
+                        <div class="select-field">
+                                
+                                 <svg width="24px" height="24px" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="When" role="img" focusable="false"><path d="M12 2.83398C6.91671 2.83398 2.83337 6.91732 2.83337 12.0007C2.83337 17.084 6.91671 21.1673 12 21.1673C17.0834 21.1673 21.1667 17.084 21.1667 12.0007C21.1667 6.91732 17.0834 2.83398 12 2.83398ZM17 13.6673H10.3334V5.33398H12.8334V11.1673H17V13.6673Z" fill="#000000"></path></svg>
+                            <input type="text" placeholder="Deliver Now">
+
+                            
+                        </div>
+                        <div class="order-btn">Find Food</div>
+
+                    </div>
+
+                    <p class="para"><a href="#">Sign</a> In for your recent addresses</p>
+
+
+            </div>
+             
+        </div>
+    </div>
+
+    <div class="seperation-box"></div>
+    <div class="container box-fit-padding">
+        <div class="container box">
+            <div class="features-box">
+                <img class="feature-img" src="images/1.png">
+                <h1>Feed your employees</h1>
+                <a href="#">Create a business account</a>
+            </div>
+            <div class="features-box">
+                <img class="feature-img" src="images/2.png">
+                <h1>Your restaurant, delivered</h1>
+                <a href="#">Add your restaurant</a>
+            </div>
+            <div class="features-box"> 
+                <img class="feature-img" src="images/3.png">
+                <h1>Deliver with Uber Eats</h1>
+                <a href="#">Sign up to deliver</a>
+                
+            </div>
+        </div>
+
+
+            <div class="container">
+                <div class="map-block">
+                    <h1 class="map-title">Cities near me</h1>
+                    <a href="#">View all 500+ cities</a>
+                </div>
+                <div id="googleMap">
+                    
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26371540.747348033!2d-113.72129444921605!3d36.21076565580928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sin!4v1673252614760!5m2!1sen!2sin" width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="top-footer">
+                    <div>
+                        <a href="#">Akron</a>
+                    </div>
+                    <div>
+                        <a href="#">Hartford</a>
+                    </div>
+                    <div>
+                        <a href="#">Nashville</a>
+                    </div>
+                    <div>
+                        <a href="#">Providence</a>
+                    </div>
+                    <div>
+                        <a href="#">Albuquerque</a>
+                    </div>
+                   
+                    <div>
+                        <a href="#">Houston</a>
+                    </div>
+                    <div>
+                        <a href="#">New Orleans</a>
+                    </div>
+                    
+                    <div>
+                        <a href="#">Queens</a>
+                    </div>
+                    <div>
+                        <a href="#">Bridgeport</a>
+                    </div>
+                    <div>
+                        <a href="#">Indianapolis
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">Oklahoma City</a>
+                    </div>
+                    <div>
+                        <a href="#">San Antonio</a>
+                    </div>
+                    <div>
+                        <a href="#">Concord</a>
+                    </div>
+                    <div>
+                        <a href="#">McAllen</a>
+                    </div>
+                    <div>
+                        <a href="#">Omaha</a>
+                    </div>
+                    <div>
+                        <a href="#">Stony Brook
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">Dayton</a>
+                    </div>
+                    <div>
+                        
+                        <a href="#">Mesa</a>
+                    </div>
+                    <div>
+                        <a href="#">Orlando</a>
+                    </div>
+                    <div>
+                        <a href="#">Tucson</a>
+                    </div>
+                    <div>
+                        <a href="#">El Paso</a>
+                    </div>
+                    <div>
+                        <a href="#">Milwaukee</a>
+                    </div>
+                    <div>
+                        <a href="#">Palm Bay</a>
+                    </div>
+                    <div>
+                        <a href="#">West Hollywood</a>
+                    </div>
+
+                </div>
+
+                <div class="second-footer">
+                    <div class="inline-title">
+                    <h1>Countries with Uber Eats</h1>
+                    <a href="#">View all countries</a>
+                   </div>
+                    <div class="top-footer">
+                        <div>
+                            <a href="#">Australia</a>
+                        </div>
+                        <div>
+                            <a href="#">El Salvador
+                            </a>
+                        </div>
+                            <div>
+                            <a href="#">Mexico
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">Sri Lanka</a>
+                        </div>
+                        <div>
+                            <a href="#">Belgium</a>
+                        </div>
+                        <div>
+                            <a href="#">France</a>
+                        </div>
+                       
+                        <div>
+                            <a href="#">Netherlands</a>
+                        </div>
+                        <div>
+                            <a href="#">Sweden</a>
+                        </div>
+                        
+                        <div>
+                            <a href="#">Bolivia</a>
+                        </div>
+                        <div>
+                            <a href="#">Germany</a>
+                        </div>
+                        <div>
+                            <a href="#">New Zealand
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">Switzerland</a>
+                        </div>
+                        <div>
+                            <a href="#">Canada</a>
+                        </div>
+                        <div>
+                            <a href="#">Guatemala</a>
+                        </div>
+                        <div>
+                            <a href="#">Panama</a>
+                        </div>
+                        <div>
+                            <a href="#">Taiwan (ROC)</a>
+                        </div>
+                        <div>
+                            <a href="#">Chile
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#">Ireland</a>
+                        </div>
+                        <div>
+                            
+                            <a href="#">Poland</a>
+                        </div>
+                        <div>
+                            <a href="#">United Kingdom</a>
+                        </div>
+                        <div>
+                            <a href="#">Costa Rica</a>
+                        </div>
+                        <div>
+                            <a href="#">Italy</a>
+                        </div>
+                        <div>
+                            <a href="#">Portugal</a>
+                        </div>
+                        <div>
+                            <a href="#">United States</a>
+                        </div>
+                        <div>
+                            <a href="#">Dominican Republic</a>
+                        </div>
+                        <div>
+                            <a href="#">Japan</a>
+                        </div>
+                        <div>
+                            <a href="#">South Africa</a>
+                        </div>
+                        <div>
+                            <a href="#"></a>
+                        </div>
+                        <div>
+                            <a href="#">Ecuador</a>
+                        </div>
+                        <div>
+                            <a href="#">Kenya</a>
+                        </div>
+                        <div>
+                            <a href="#">Spain</a>
+                        </div>
+
+    
+                    </div>
+                </div>
+
+                
+            </div>
+
+
+
+
+            <footer class="ftr">
+                    <div class="seperation-1">
+                        <div class="box1">
+                                <div>
+                                     <svg width="134" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(#clip0_227_7066)" fill="#000"><path d="M70.629.334H85.72V3.98H74.705v5.215h10.722v3.537H74.705v5.288H85.72v3.647H70.629V.334Zm56.101 21.734c4.627 0 7.234-2.188 7.234-5.215 0-2.151-1.543-3.756-4.774-4.449l-3.415-.693c-1.983-.364-2.607-.729-2.607-1.458 0-.948.955-1.532 2.718-1.532 1.909 0 3.305.51 3.709 2.26h4.002c-.22-3.281-2.607-5.47-7.454-5.47-4.186 0-7.124 1.715-7.124 5.033 0 2.298 1.616 3.793 5.104 4.522l3.819.875c1.505.292 1.909.693 1.909 1.313 0 .985-1.138 1.605-2.974 1.605-2.313 0-3.635-.51-4.149-2.261h-4.04c.588 3.282 3.048 5.47 8.042 5.47Zm-9.124-3.975h-3.011c-.918 0-1.506-.401-1.506-1.24V9.487h4.517V5.913h-4.517V1.428h-4.039v4.485h-3.048v3.574h3.048v8.387c0 2.115 1.505 3.792 4.223 3.792h4.333v-3.573Zm-13.309-12.18v15.754h-4.002v-1.422a7.84 7.84 0 0 1-5.068 1.823c-4.737 0-8.445-3.683-8.445-8.278 0-4.595 3.709-8.278 8.445-8.278a7.84 7.84 0 0 1 5.068 1.824V5.914h4.002Zm-3.929 7.877a4.771 4.771 0 0 0-4.81-4.814 4.795 4.795 0 0 0-4.81 4.814 4.795 4.795 0 0 0 4.81 4.813c2.68 0 4.81-2.115 4.81-4.813ZM8.982 19.167c2.976 0 5.277-2.286 5.277-5.669V.333h3.223v21.332H14.29v-1.98c-1.442 1.492-3.437 2.346-5.677 2.346-4.602 0-8.132-3.322-8.132-8.35V.334h3.223v13.165c0 3.443 2.27 5.668 5.278 5.668Zm10.893 2.498h3.069v-1.95a7.836 7.836 0 0 0 5.584 2.317c4.603 0 8.224-3.627 8.224-8.107 0-4.51-3.62-8.136-8.224-8.136a7.764 7.764 0 0 0-5.554 2.316V.334h-3.1v21.332Zm8.439-2.346a5.377 5.377 0 0 1-5.401-5.394 5.377 5.377 0 0 1 5.4-5.394 5.37 5.37 0 0 1 5.37 5.394c0 2.987-2.423 5.394-5.37 5.394Zm17.705-13.5c-4.572 0-8.04 3.687-8.04 8.075 0 4.632 3.622 8.107 8.316 8.107 2.854 0 5.186-1.25 6.751-3.322l-2.24-1.646c-1.166 1.554-2.7 2.286-4.51 2.286-2.64 0-4.757-1.89-5.187-4.419h12.735v-1.006c0-4.632-3.314-8.075-7.825-8.075Zm-4.848 6.643c.553-2.377 2.486-3.961 4.787-3.961 2.302 0 4.235 1.584 4.757 3.961H41.17ZM63.45 8.866V6.002h-1.074c-1.718 0-2.976.792-3.743 2.042v-1.92h-3.069v15.542h3.1v-8.838c0-2.407 1.472-3.962 3.497-3.962h1.289Z"/></g><defs><clipPath id="clip0_227_7066"><path fill="#fff" transform="translate(.481 .333)" d="M0 0h133.494v27.429H0z"/></clipPath></defs></svg>   
+                                
+                                   
+                                    </div>
+                            <div>
+                             </div>
+                        </div>
+                        <div class="box2">
+                                 <div>
+                                    <a href="#"> Get Help</a>
+                                </div>
+                                <div>
+                                    <a href="#">Restaurants near me</a>
+                                </div>
+                                <div>
+                                    <a href="#">Buy gift cards</a>
+                                </div>
+                                <div>
+                                    <a href="#">View all cities
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">Add your restaurant
+                                    </a>
+                                </div>
+                               
+                                <div>
+                                    <a href="#">View all countries
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">Sign up to deliver
+                                    </a>
+                                </div>
+                                
+                                <div>
+                                    <a href="#">Pickup near me
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">Create a business account
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">About Uber Eats
+
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">Promotions
+                                    </a>
+                                </div>
+                                <div>
+                                    <a href="#">English</a>
+                                </div>
+                                
+                                
+            
+                             
+                        </div>
+                    </div>
+            </footer>
+
+
+    </div>
+ 
+</body>
+
+
+
+</html>
